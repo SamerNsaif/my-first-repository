@@ -4,6 +4,18 @@
 puts "Please enter a 4 digit number"
 n = gets.chomp().to_i
 
-thou = n / 1000
+if n < 1000 || n > 9999
+  puts "This is not a 4 digit number."
 
-puts thou
+else
+
+  thou = n / 1000
+  hund = (n / 100) % 10
+  ten = ((n/10) % 100) % 10
+  one = ((n % 1000) % 100) % 10
+
+  puts thou
+  puts hund
+  puts ten
+  puts one
+end
